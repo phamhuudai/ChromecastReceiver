@@ -16,14 +16,36 @@
  <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="css/receiver.css" media="screen" />
+  <!-- <link rel="stylesheet" href="css/receiver.css" media="screen" /> -->
   <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js">
   </script>
+  <style type="text/css">
+  	body {
+	  --playback-logo-image: url('./icon.png');
+	}
+	cast-media-player {
+	  --theme-hue: 100;
+	  --progress-color: rgb(0, 255, 0);
+	  --splash-image: url('./icon.png');
+	  --splash-size: cover;
+	}
+  </style>
 </head>
 <body>
   <cast-media-player></cast-media-player>
 </body>
 <footer>
-  <script src="js/receiver.js"></script>
+  <!-- <script src="js/receiver.js"></script> -->
+  <script type="text/javascript">
+  	const context = cast.framework.CastReceiverContext.getInstance();
+
+
+	// Update style using javascript
+	let playerElement = document.getElementsByTagName("cast-media-player")[0];
+	playerElement.style.setProperty('--splash-image', 'url("./icon.png")');
+
+
+	context.start();
+  </script>
 </footer>
 </html>
