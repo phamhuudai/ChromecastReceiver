@@ -1,14 +1,23 @@
 <html>
 <head>
-  <script type="text/javascript"
-      src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js">
-  </script>
+  <title>CAF Receiver</title>
 </head>
 <body>
-  <cast-media-player></cast-media-player>
-  <img src="./icon.png">
-  <script>
-    cast.framework.CastReceiverContext.getInstance().start();
+  <cast-media-player id="player"></cast-media-player>
+  <style>
+    #player {
+        --theme-hue: 210;
+        --splash-image: url("https://raw.githubusercontent.com/phamhuudai/ChromecastReceiver/master/icon.png");
+        --splash-background: #3D4246;
+        --logo-image: url("https://raw.githubusercontent.com/phamhuudai/ChromecastReceiver/master/icon.png");
+        --watermark-image: url("https://raw.githubusercontent.com/phamhuudai/ChromecastReceiver/master/icon.png");
+        --watermark-size: 200px 200px;
+        --progress-color: #F15A28; 
+        --font-family: Roboto;
+    }
+  </style>
+  <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js">
   </script>
+     <script src="receiver.js"></script>
 </body>
 </html>
