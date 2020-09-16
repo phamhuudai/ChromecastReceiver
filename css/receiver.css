@@ -1,0 +1,9 @@
+body {
+  --playback-logo-image: url('https://raw.githubusercontent.com/phamhuudai/ChromecastReceiver/master/icon.png');
+}
+cast-media-player {
+  --theme-hue: 100;
+  --progress-color: rgb(0, 255, 0);
+  --splash-image: url('https://raw.githubusercontent.com/phamhuudai/ChromecastReceiver/master/icon.png');
+  --splash-size: cover;
+}
